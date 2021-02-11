@@ -14,6 +14,7 @@
 5. [Conditions de réalisation](#conditions)
 6. [Aide et discussions](#discussion)
 7. [Remise](#remise)
+8. [Baréme](#bareme)
 
 <a name="objectifs"></a>
 ## 1. Objectifs
@@ -76,8 +77,9 @@ Ensuite, visitez le site Web de l'outil [Understand](https://scitools.com/) et c
 
 
 **Question :**
-1. Comment vous trouvez l'utilité de ces trois outils de visualisation pour la compréhension de logiciel? Pouvez-vous en extraire des informations interessantes sur le projet visualisé?
-2. Quelle visualisation serait-elle la plus utile pour planifier les activités de refactoring? Indique le nom de l'outil et le type de la visualisation spécifique avec un (ou des) imprime(s) écran dans votre rapport de laboratoire.
+1. Pour chacun des 3 outils, faire 2 imprimes écrans de la visualisation que vous jugez plus pertinentes pour la compréhension du programme React (en total: 2 impimes écran * 3 outils = 6). Copiez les visualisations choisies dans votre rapport et justifiez briévement la pertinence de chacune.
+2. Comment vous trouvez l'utilité de ces trois outils de visualisation pour la compréhension de logiciel? Pouvez-vous en extraire des informations interessantes sur le projet visualisé?
+3. Quelle visualisation serait-elle la plus utile pour planifier les activités de refactoring? Indiquez le nom de l'outil et le type de la visualisation spécifique avec un (ou des) imprime(s) écran dans votre rapport de laboratoire.
 
 <a name="partie2"></a>
 ### Partie 2 : JPacman -- prise en main pratique
@@ -105,8 +107,8 @@ En commençant par Understand, générez une visualisation de type "TreeMap" en 
 5. Quelles sont les 3 méthodes les plus larges dans JPacman?
 
 Maintenant, en utilisant CodeScene, répondez aux questions suivantes:
--6. Pouvez-vous identifier les artefacts qui semblent être exceptionnelles? 
--7. Ces artefacts pourraient-ils bénéficier de refactoring? 
+-6. Pouvez-vous identifier les artefacts qui semblent être exceptionnels? 
+-7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, identifiez 3 operations à appliquer à ces artefacts (identifiez seulement, sans les appliquer dans le code)? Justifiez votre réponse.
 -8. Comment les mesures de qualité (complexité, couplage, taille) de ces artefacts sont-elles comparées aux autres?
 
 
@@ -142,3 +144,14 @@ Pour faciliter la correction, vous devez nommer vos fichiers de la façon suivan
 LOG530H2021-LabXX-EquipeYY-CodePermanent1_CodePermanent2_CodePermanent3
 ``
 
+<a name="bareme"></a>
+## 8. Baréme
+
+| Critére   | Évaluation |
+| -------- | ----------- |
+| **Présentation du rapport** <br> - Structure et qualité de rédaction  <br> - Ampleur des discussions et recul sur les réponses aux questions | **3 points**<br> 1  <br> 2|
+| **Partie 1 : Introduction (le projet React)** <br> 1. Exécution des 3 outils et imprimes écrans <br> 2. Utilité des trois outils de visualisation <br> 3. Identification de visualisation pour planifier les activités de refactoring| **4 points** <br> 2 <br> 1  <br> 1|
+| **Partie 2 : JPacman -- prise en main pratique** <br> 1. Identification des fonctionalités manquantes <br> 2. Discussion sur l'implémentation des fonctionalité et la possibilité de restructation | **3 points** <br> 1.5 <br> 1.5  |
+| **Partie 3 : JPacman -- Visualisation** <br> 1. Génération de la visualisation TreeMap <br> 2. Identification de la classe la plus volumineuse <br> 3. Identification de la classe la plus complexe  <br> 4. Identification des méthodes complexes <br> 5. Identification des méthodes larges <br> 6. Identification de artefacts exceptionnels avec CodeScene <br> 7. Discussion de refactoring <br> 8. Comparison des mesures de qualité | **6 points** <br> 0.5 <br> 0.5  <br> 0.5 <br> 0.5 <br> 0.5 <br> 0.5 <br> 1 <br> 1.5 <br> 0.5 |
+| **Partie 4 : Discussion** <br> 1. Justification de l'utilité des outils pour la réingénierie de JPacman <br> 2. Sélection et justification de l'outil <br> 3. Identification des situations particulières pour utiliser ou ne pas utiliser les outils <br> 4. Identification d'autres utilisations des outils | **4 points** <br> 1 <br> 1 <br> 1 <br> 1|
+| **TOTAL** | **20 points** |
