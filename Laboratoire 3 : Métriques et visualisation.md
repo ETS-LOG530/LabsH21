@@ -1,10 +1,13 @@
-## Laboratoire 3 : Métriques et visualisation
-### LOG530 – Réingénierie du Logiciel
-#### Date de remise : 25 février 2021 à 23h59
+# Laboratoire 3 : Métriques et visualisation
+## LOG530 – Réingénierie du Logiciel
+### Date de remise : 25 février 2021 à 23h59
 
 #### Table des matières
 1. [Objectifs](#objectifs)
 2. [Matériel et outils à utiliser](#materiel)
+	- [Outils de base](#outils)
+	- [Lectures de référence recommandées](#lecture)
+	- [Outils auxiliaires](#auxiliaires)
 3. [Installation et préparation](#installation)
 4. [Travail à réaliser](#travail)
 	- [Partie 1 : Introduction (le projet ``React``)](#partie1)
@@ -36,7 +39,7 @@ Le but de ce laboratoire est de stimuler la discussion sur les propriétés d'un
 
 <a name="lecture"></a>
 ### Lectures de référence recommandées
--	Chapitre 2 « First Contact » du livre Object-Oriented Reengineering Patterns (disponible en PDF sous l’onglet Références dans Moodle) : page 37 (« Where do I start? »).
+-	Chapitre 2 « First Contact » du livre Object-Oriented Reengineering Patterns (disponible en PDF sous l’onglet Références dans Moodle) : page 39 (« Where do I start? »).
 
 <a name="auxiliaires"></a>
 ### Outils auxiliaires
@@ -67,26 +70,28 @@ Assurez-vous de suivre l'installation et les étapes décrites dans le [laborato
 <a name="partie1"></a>
 ### Partie 1 : Introduction (le projet ``React``)
 
-Cette première tâche a deux objectifs: (i) vous aider à vous familiariser avec l'interface de CodeScene; et (ii) observer si toutes les visualisations sont utiles pour la réingénierie.
+Cette première tâche a deux objectifs: <br/>
+(i) vous aider à vous familiariser avec l'interface de CodeScene;<br/>
+(ii) observer si toutes les visualisations sont utiles pour la réingénierie.
 
 Visitez le site Web de CodeScene et cliquez sur les examples illustratifs fournis ([Demo](https://codescene.io/showcase)). Ce sont des exemples (à partir d'une version complète de CodeScene et pas seulement de la version gratuite que nous utilisons) de projets analysés par CodeScene. Sélectionnez le projet ``React``.
 
-Visitez le site Web de JsCity et regardez les exemples. Vous pouvez d'abord sélectionner un exemple simple pour vous familiariser. Par la suite, sélectionnez le projet ``React`` et  visualisez le (soyez patient car cela peut prendre un certain temps).
+Visitez le site Web de [JsCity](https://github.com/ASERG-UFMG/JSCity/wiki/JSCITY) et regardez les exemples. Vous pouvez d'abord sélectionner un exemple simple pour vous familiariser. Par la suite, sélectionnez le projet ``React`` et  visualisez le (soyez patient car cela peut prendre un certain temps).
 
 Ensuite, visitez le site Web de l'outil [Understand](https://scitools.com/) et cliquez sur les examples illustratifs fournis pour vous familiariser avec l'outil. Ensuite, télécharger/clonez, puis importez la derniére version du projet [React](https://github.com/facebook/react) avec l'outil Understand.
 
 
 **Question :**
-1. Pour chacun des 3 outils, faire 2 imprimes écrans de la visualisation que vous jugez plus pertinentes pour la compréhension du programme React (en total: 2 impimes écran * 3 outils = 6). Copiez les visualisations choisies dans votre rapport et justifiez briévement la pertinence de chacune.
+1. Pour chacun des 3 outils, faire 2 captures d'écrans de la visualisation que vous jugez plus pertinentes pour la compréhension du programme React (en total: 2 captudes d'écran * 3 outils = 6). Copiez les visualisations choisies dans votre rapport et justifiez briévement la pertinence de chacune.
 2. Comment vous trouvez l'utilité de ces trois outils de visualisation pour la compréhension de logiciel? Pouvez-vous en extraire des informations interessantes sur le projet visualisé?
-3. Quelle visualisation serait-elle la plus utile pour planifier les activités de refactoring? Indiquez le nom de l'outil et le type de la visualisation spécifique avec un (ou des) imprime(s) écran dans votre rapport de laboratoire.
+3. Quelle visualisation serait-elle la plus utile pour planifier les activités de refactoring? Indiquez le nom de l'outil et le type de la visualisation spécifique avec un (ou des) capture(s) d'écran dans votre rapport de laboratoire.
 
 <a name="partie2"></a>
 ### Partie 2 : JPacman -- prise en main pratique
 
-Pour la deuxième tâche, l'objectif est de commencer à se familiariser avec le code source de JPacman. Téléchargez/clonez le référentiel et exécutez l'application dans votre IDE. Maintenant, regardez le code source et essayez de comprendre sa structure interne (packages, classes, méthodes, variables, etc.). Dans le dossier ``docs/uml``, il y a deux diagrammes UML simplifiés.
+Pour la deuxième tâche, l'objectif est de commencer à se familiariser avec le code source de [JPacman](https://github.com/hscrocha/jpacman). Téléchargez/clonez le référentiel et exécutez l'application dans votre IDE. Maintenant, regardez le code source et essayez de comprendre sa structure interne (packages, classes, méthodes, variables, etc.). Dans le dossier ``docs/uml``, il y a deux diagrammes UML simplifiés.
 
-Comme indiqué dans le livre (OORP, p.36), il s'agit de votre « premier contact » avec le logiciel qui nécessite des activités de réingénierie. Comme souvent, nous nous demandons « comment commencer? » (OORP, p. 37).
+Comme indiqué dans le livre (OORP, p.39), il s'agit de votre « premier contact » avec le logiciel qui nécessite des activités de réingénierie. Comme souvent, nous nous demandons « comment commencer? » (« Where do I start? ») (OORP, p. 40).
 
 En effet, JPacman est une implémentation Java qui est censée répliquer le jeu [Pacman original](https://en.wikipedia.org/wiki/Pac-Man).
 
@@ -97,37 +102,35 @@ En effet, JPacman est une implémentation Java qui est censée répliquer le jeu
 <a name="partie3"></a>
 ### Partie 3 : JPacman -- Visualisation
 
-La troisième partie consiste à utiliser nos outils de visualisation de choix (CodeScene et Understand) pour identifier d'éventuelles cibles de réingénierie. Puisque nous avions déjà le « premier contact », nous devrions maintenant passer à la "compréhension initiale" (OORP, p.83) du système. Un patron de réingénierie important consiste à étudier les entités exceptionnelles.
+La troisième partie consiste à utiliser nos outils de visualisation de choix (CodeScene et Understand) pour identifier d'éventuelles cibles de réingénierie dans JPacman. Puisque nous avions déjà le « premier contact », nous devrions maintenant passer à la "compréhension initiale" (OORP, p.83) du système. Un patron de réingénierie important consiste à étudier les entités exceptionnelles.
 
+#### Understand
 En commençant par Understand, générez une visualisation de type "TreeMap" en se basant sur la métrique ``CountLine`` pour la taille du map (option ``Map Size``) et la métrique ``MaxCyclomatic`` pour la couleur (option ``Map Color to``). Veuillez vous référer au menu *Metrics* -> *Metrics Treemap*.
+
+**Question :**
 1. Générer la figure de visualisation et copier la dans votre rapport de laboratoire.
 2. Quelle est la classe la plus volumuneuse dans JPacman?
 3. Quelle est la classe la plus complexe dans JPacman?
 4. Quelles sont les 8 méthodes les plus complexes dans JPacman?
 5. Quelles sont les 3 méthodes les plus larges dans JPacman?
 
-Maintenant, en utilisant CodeScene, répondez aux questions suivantes:
+#### CodeScene
+Maintenant, en utilisant CodeScene, répondez aux questions suivantes.
 
--6. Pouvez-vous identifier les artefacts qui semblent être exceptionnels? 
-
--7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, identifiez 3 operations à appliquer à ces artefacts (identifiez seulement, sans les appliquer dans le code)? Justifiez votre réponse.
-
--8. Comment les mesures de qualité (complexité, couplage, taille) de ces artefacts sont-elles comparées aux autres?
-
-
+**Question :**<br/>
+6. Pouvez-vous identifier les artefacts qui semblent être exceptionnels? <br/>
+7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, identifiez 3 operations à appliquer à ces artefacts (identifiez seulement, sans les appliquer dans le code)? Justifiez votre réponse.<br/>
+8. Comment les mesures de qualité (complexité, couplage, taille) de ces artefacts sont-elles comparées aux autres?<br/>
 
 <a name="partie4"></a>
 ### Partie 4 : Discussion
 Dans ce laboratoire, nous avons utilisé les métriques de qualité et la visualisation, démontrant leur efficacité lors de la réingénierie, pour la compréhension initiale.
 
+**Question :**
 1.	Est-ce que les outils de mesure de qualité et de visualisation utilisés dans ce laboratoire ont pu fournir les informations requises pour assister à la compréhension et la réingénierie de JPacman? 
 2.	Lequel des deux outils de visualisation (CodeScene et Understand) préférez-vous pour vous assister à la réingérie? Pourquoi? 
 3.	Y’a-t-il des situations particulières pour les utiliser ou ne pas les utiliser ? 
 4.	Pouvez-vous envisager d'autres utilisations de ces outils pour d'autres tâches de réingénierie ?
-
-
-
-
 
 <a name="conditions"></a>
 ## 5. Conditions de réalisation
@@ -141,11 +144,16 @@ Vous êtes encouragés à discuter du laboratoire et à poser vos questions en u
 ## 7. Remise
 Le travail doit être remis électroniquement sur Moodle au plus tard le **25 février à 23h59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers, ainsi qu’un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail. 
 Une seule remise électronique est nécessaire par équipe. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent.
-Pour faciliter la correction, vous devez nommer vos fichiers de la façon suivante :
+Pour faciliter la correction, vous devez nommer votre dossier de la remise de la façon suivante :
 
-``
+```
 LOG530H2021-LabXX-EquipeYY-CodePermanent1_CodePermanent2_CodePermanent3
-``
+```
+
+et votre rapport ainsi : 
+```
+EquipeYY-Rapport.pdf
+```
 
 <a name="bareme"></a>
 ## 8. Baréme
