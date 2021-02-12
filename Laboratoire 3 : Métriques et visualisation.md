@@ -107,8 +107,11 @@ En commençant par Understand, générez une visualisation de type "TreeMap" en 
 5. Quelles sont les 3 méthodes les plus larges dans JPacman?
 
 Maintenant, en utilisant CodeScene, répondez aux questions suivantes:
+
 -6. Pouvez-vous identifier les artefacts qui semblent être exceptionnels? 
+
 -7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, identifiez 3 operations à appliquer à ces artefacts (identifiez seulement, sans les appliquer dans le code)? Justifiez votre réponse.
+
 -8. Comment les mesures de qualité (complexité, couplage, taille) de ces artefacts sont-elles comparées aux autres?
 
 
