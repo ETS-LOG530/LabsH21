@@ -81,7 +81,7 @@ Visitez le site Web de [JsCity](https://github.com/ASERG-UFMG/JSCity/wiki/JSCITY
 Ensuite, visitez le site Web de l'outil [Understand](https://scitools.com/) et cliquez sur les examples illustratifs fournis pour vous familiariser avec l'outil. Ensuite, télécharger/clonez, puis importez la derniére version du projet [React](https://github.com/facebook/react) avec l'outil Understand.
 
 
-**Question :**
+**Questions :**
 1. Pour chacun des 3 outils, faire 2 captures d'écrans de la visualisation que vous jugez plus pertinentes pour la compréhension du programme React (en total: 2 captudes d'écran * 3 outils = 6). Copiez les visualisations choisies dans votre rapport et justifiez briévement la pertinence de chacune.
 2. Comment vous trouvez l'utilité de ces trois outils de visualisation pour la compréhension de logiciel? Pouvez-vous en extraire des informations interessantes sur le projet visualisé?
 3. Quelle visualisation serait-elle la plus utile pour planifier les activités de refactoring? Indiquez le nom de l'outil et le type de la visualisation spécifique avec un (ou des) capture(s) d'écran dans votre rapport de laboratoire.
@@ -95,7 +95,7 @@ Comme indiqué dans le livre (OORP, p.39), il s'agit de votre « premier contact
 
 En effet, JPacman est une implémentation Java qui est censée répliquer le jeu [Pacman original](https://en.wikipedia.org/wiki/Pac-Man).
 
-**Question :**
+**Questions :**
 1. Quelles fonctionnalités manquent dans Jpacman (par rapport à la version originale)?
 2. Est-il possible d'implémenter ces fonctionnalités dès maintenant ou devrions-nous restructurer le projet pour faciliter l'ajout des nouvelles fonctionnalités? Pourquoi? Cette question est "rhétorique" pour cette tâche, mais vous devriez y penser lorsque vous faites un projet de réingénierie.
 
@@ -107,7 +107,7 @@ La troisième partie consiste à utiliser nos outils de visualisation de choix (
 #### Understand
 En commençant par Understand, générez une visualisation de type "TreeMap" en se basant sur la métrique ``CountLine`` pour la taille du map (option ``Map Size``) et la métrique ``MaxCyclomatic`` pour la couleur (option ``Map Color to``). Veuillez vous référer au menu *Metrics* -> *Metrics Treemap*.
 
-**Question :**
+**Questions :**
 1. Générer la figure de visualisation et copier la dans votre rapport de laboratoire.
 2. Quelle est la classe la plus volumuneuse dans JPacman?
 3. Quelle est la classe la plus complexe dans JPacman?
@@ -117,7 +117,7 @@ En commençant par Understand, générez une visualisation de type "TreeMap" en 
 #### CodeScene
 Maintenant, en utilisant CodeScene, répondez aux questions suivantes.
 
-**Question :**<br/>
+**Questions :**<br/>
 6. Pouvez-vous identifier les artefacts qui semblent être exceptionnels? <br/>
 7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, identifiez 3 operations à appliquer à ces artefacts (identifiez seulement, sans les appliquer dans le code)? Justifiez votre réponse.<br/>
 8. Comment les mesures de qualité (complexité, couplage, taille) de ces artefacts sont-elles comparées aux autres?<br/>
@@ -126,7 +126,7 @@ Maintenant, en utilisant CodeScene, répondez aux questions suivantes.
 ### Partie 4 : Discussion
 Dans ce laboratoire, nous avons utilisé les métriques de qualité et la visualisation, démontrant leur efficacité lors de la réingénierie, pour la compréhension initiale.
 
-**Question :**
+**Questions :**
 1.	Est-ce que les outils de mesure de qualité et de visualisation utilisés dans ce laboratoire ont pu fournir les informations requises pour assister à la compréhension et la réingénierie de JPacman? 
 2.	Lequel des deux outils de visualisation (CodeScene et Understand) préférez-vous pour vous assister à la réingérie? Pourquoi? 
 3.	Y’a-t-il des situations particulières pour les utiliser ou ne pas les utiliser ? 
