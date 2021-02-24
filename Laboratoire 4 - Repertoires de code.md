@@ -108,6 +108,11 @@ Implémentez un stript pour dessiner le graphe de nuage de points sous le nom <`
 ![Nuage de Points](figs/rootbeer.png)
 ![Nuage de Points](https://github.com/ETS-LOG530/sre/blob/main/images/ScatterPlot.png)
 
+<p align="center">
+  <img src="https://github.com/ETS-LOG530/sre/blob/main/images/ScatterPlot.png?raw=true" alt="Nuage de points"/>
+</p>
+
+
 <a name="partie3"></a> 
 ### Partie 3 : JPacman -- Historique de refactoring avec JPacman
 
