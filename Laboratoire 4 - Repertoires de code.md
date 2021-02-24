@@ -81,7 +81,7 @@ Les graphiques pour le nombre de modifications sur les fichiers dans les dépôt
 - [k9mail/k-9](https://github.com/ETS-LOG530/sre/blob/main/images/k-9_k-9.png) (uniquement les fichiers source)
 - [mendhak/gpslogger](https://github.com/ETS-LOG530/sre/blob/main/images/mendhak_gpslogger.png)
 
-Vous pouvez trouver les données pour les graphiques ci-dessus dans le dossier [``csv``](https://github.com/ETS-LOG530/LabsH21/tree/main/sre/csv) sur GitHub.
+Vous pouvez trouver les données pour les graphiques ci-dessus dans le dossier [``csv``](https://github.com/ETS-LOG530/sre/tree/main/csv) sur GitHub.
 
 Un référentiel contient à la fois des fichiers de code source et d'autres fichiers tels que des fichiers de configuration, documentation, etc. Les développeurs passent la plupart du temps à modifier les fichiers source pour de nombreuses raisons, par exemple, corriger des bogues, ajouter de nouvelles fonctionnalités ou refactoring. Le script [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) collecte tous les fichiers dans un référentiel. 
 
