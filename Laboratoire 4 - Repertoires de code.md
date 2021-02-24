@@ -105,7 +105,8 @@ Implémentez un stript pour dessiner le graphe de nuage de points sous le nom <`
 1. Générer les graphes de nuage de points pour chacun des 4 projets et copier/coller les dans votre rapport. Veuillez remettre également les fichiers ``CollectFiles.py``, ``'equipeXX'_authorsFileTouches.py`` et ``'equipeXX'_scatterplot.py``.
 2. Quelles constatations pouvez-vous tirez de chacun des 4 graphes?
 
-![SonarQube pour JPacMan](figs/rootbeer.png)
+![Nuage de Points](figs/rootbeer.png)
+![Nuage de Points](https://github.com/ETS-LOG530/sre/blob/main/images/ScatterPlot.png)
 
 <a name="partie3"></a> 
 ### Partie 3 : JPacman -- Historique de refactoring avec JPacman
