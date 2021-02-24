@@ -78,7 +78,7 @@ Les graphiques pour le nombre de modifications sur les fichiers dans les dépôt
 
 - [scottyab/rootbeer](https://github.com/ETS-LOG530/sre/blob/main/images/scottyab_rootbeer.png) (Tous les fichiers)
 - [Skyscanner/backpak](https://github.com/ETS-LOG530/sre/blob/main/images/Skyscanner_backpack.png) (uniquement les fichiers source)
-[k9mail/k-9](https://github.com/ETS-LOG530/sre/blob/main/images/k-9_k-9.png) (uniquement les fichiers source)
+- [k9mail/k-9](https://github.com/ETS-LOG530/sre/blob/main/images/k-9_k-9.png) (uniquement les fichiers source)
 - [mendhak/gpslogger](https://github.com/ETS-LOG530/sre/blob/main/images/mendhak_gpslogger.png)
 
 Vous pouvez trouver les données pour les graphiques ci-dessus dans le dossier [``csv``](https://github.com/ETS-LOG530/LabsH21/tree/main/sre/csv) sur GitHub.
@@ -104,6 +104,8 @@ Implémentez un stript pour dessiner le graphe de nuage de points sous le nom <`
 
 1. Générer les graphes de nuage de points pour chacun des 4 projets et copier/coller les dans votre rapport. Veuillez remettre également les fichiers ``CollectFiles.py``, ``'equipeXX'_authorsFileTouches.py`` et ``'equipeXX'_scatterplot.py``.
 2. Quelles constatations pouvez-vous tirez de chacun des 4 graphes?
+
+![SonarQube pour JPacMan](figs/rootbeer.png)
 
 <a name="partie3"></a> 
 ### Partie 3 : JPacman -- Historique de refactoring avec JPacman
