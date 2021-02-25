@@ -72,7 +72,7 @@ Pour faire ce laboratoire, nous utilisons l'API de Github. Vous avez besoin de p
 <a name="partie1"></a>
 ### Partie 1 : Exploration des fichiers et de fréquence de changement
 
-Créez un ou plusieurs jetons GitHub en suivant le tutoriel sur ce [lien](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token). Chaque jeton correspond à un compte GitHub. Téléchargez le fichier Python [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) qui collecte les fichiers d'un dépôt sur GitHub et exécutez-le sur votre machine. Ce fichier rassemble tous les fichiers d'un référentiel, et compte le nombre de fois que le fichier est modifié tout au long de sa durée de vie.
+Créez un ou plusieurs jetons GitHub en suivant le tutoriel sur ce [lien](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token). Chaque jeton correspond à un compte GitHub. Téléchargez le fichier Python [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) qui collecte les fichiers d'un dépôt sur GitHub et exécutez-le sur votre machine. Ce fichier rassemble tous les fichiers d'un référentiel et compte le nombre de fois que le fichier est modifié tout au long de sa durée de vie.
 
 Les graphiques pour le nombre de modifications sur les fichiers dans les dépôts GitHub suivants peuvent être trouvés ici:
 
@@ -86,16 +86,16 @@ Vous pouvez trouver les données pour les graphiques ci-dessus dans le dossier [
 Un référentiel contient à la fois des fichiers de code source et d'autres fichiers tels que des fichiers de configuration, documentation, etc. Les développeurs passent la plupart du temps à modifier les fichiers source pour de nombreuses raisons, par exemple, corriger des bogues, ajouter de nouvelles fonctionnalités ou refactoring. Le script [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) collecte tous les fichiers dans un référentiel. 
 
 **Questions :**
-1. Votre première tâche consiste à adapter le script pour collecter uniquement les fichiers source. Parcourez d'abord les fichiers source de chacun des dépôts pour identifier le type de fichiers source qu'il contient (**NB.** certains projets peuvent être implémentés avec plusieurs langages de programmation). La liste de fichiers de code source pour chaque projet, sont à remettre avec votre rapport de laboratoire.
+1. Votre première tâche consiste à adapter le script pour collecter uniquement les fichiers source. Parcourez d'abord les fichiers source de chacun des dépôts pour identifier le type de fichier source qu'il contient (**NB.** certains projets peuvent être implémentés avec plusieurs langages de programmation). La liste de fichiers de code source pour chaque projet sont à remettre avec votre rapport de laboratoire.
 2. Pour chaque projet, identifier le fichier de code source le plus modifié.
 
 
 <a name="partie2"></a>
 ### Partie 2 : Qui a changé quoi?
 
-Commencez par un fork du dépot [ETS-LOG530/sre](https://github.com/ETS-LOG530/sre). Puis, écrivez un script avec le nom <``'equipeXX'_authorsFileTouches.py``> qui collecte les **auteurs** et les **dates** e modiciations pour chaque fichier dans la liste des fichiers générés par le fichier adapté ``CollectFiles.py`` (seulement les fichiers source).
+Commencez par un fork du dépot [ETS-LOG530/sre](https://github.com/ETS-LOG530/sre). Puis écrivez un script avec le nom <``'equipeXX'_authorsFileTouches.py``> qui collecte les **auteurs** et les **dates** de modiciations pour chaque fichier dans la liste des fichiers générés par le fichier adapté ``CollectFiles.py`` (seulement les fichiers source).
 
-Implémentez un script qui génère un nuage de points (en utilisant ``matplotlib``) de variables de **date** vs **fichier** où les points sont ombré en fonction de la variable auteur. Chaque athour doit avoir une couleur distincte. En regardant le nuage de points, on devrait être capable d'indiquer si un fichier est touché plusieurs fois et par qui? Cela peut aider, par exemple, lors de l'identification des opportunités de refactoring ou à l'ajout de fonctionalité, à quel développeur la tâche doit être attribuée car il a travaillé sur le fichier plusieurs fois. 
+Implémentez un script qui génère un nuage de points (en utilisant ``matplotlib``) de variables de **date** vs **fichier** où les points sont coloriés en fonction de la variable auteur. Chaque auteur doit avoir une couleur distincte. En regardant le nuage de points, on devrait être capable d'indiquer si un fichier est touché plusieurs fois et par qui. Cela peut aider, par exemple, lors de l'identification des opportunités de refactoring ou à l'ajout de fonctionalité, à quel développeur la tâche doit être attribuée car il a travaillé sur le fichier plusieurs fois. 
 Vous obtenez un indice sur la façon de dessiner le nuage de points ce lien sur [Stackoverflow](https://stackoverflow.com/questions/8202605/matplotlib-scatterplot-colour-as-a-function-of-a-third-variable).
 
 Implémentez un stript pour dessiner le graphe de nuage de points sous le nom <``'equipeXX'_scatterplot.py``>. 
@@ -119,21 +119,21 @@ Implémentez un stript pour dessiner le graphe de nuage de points sous le nom <`
 ### Partie 3 : JPacman -- Historique de refactoring avec JPacman
 
 Dans cette partie, nous nous intéressons à l'historique des changements, mais en particulier à l'historique des refactorings appliqués par les développeurs.
-Nous utilisons l'outil [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner) qui permet de parcourir les commits et en extraire les opérations de refctoring appliqués dans un projet donné.
+Nous utilisons l'outil [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner) qui permet de parcourir les commits et d'en extraire les opérations de refactoring appliqués dans un projet donné.
 
 En se basant sur la documentation de l'outil [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner), exécutez l'outil avec le projet [JPacman](https://github.com/hscrocha/jpacman) pour en extraire l'historique de refactoring.
 
 **Questions**
 1. Quelles sont les 3 opérations de refactoring les plus appliquées?
-2. Quelle est la classe la plus refactorisée (c-a-d, elle apparait dans des opérations de refactoring)?
+2. Quelle est la classe la plus refactorisée (c'est-à-dire, celle qui apparait le plus dans des opérations de refactoring)?
 3. (Question Bonus) Quel est le développeur le plus actif en application de refactoring?
 
 **NB.** Vous pouvez implémenter votre script pour lire l'output générer par RefactoringMiner pour répondre aux questions.
 
 <a name="partie4"></a>
 ### Partie 4 (Optionnelle : Bonus) : Historique des Pull Requests 
-Écrivez un script qui permet d'extraire les pull requests qui sont 'Merged', et les pull requests qui sont fermées (mais non 'Merged') de chacun des référentiels ci-dessus. Vous pouvez en savoir plus sur la structure des pull requests à partir d'ici : [Pull Requests](https://developer.github.com/v3/pulls/). 
-1. Dessinez un graphique contenant les 5 référentiels indiqués dans la Section [Outils de base](#outils) qui compare les Pull Requests qui sont 'Merged'  et ceux qui sont fermés.
+Écrivez un script qui permet d'extraire les pull requests qui sont 'Merged' et les pull requests qui sont fermées (mais non 'Merged') de chacun des référentiels ci-dessus. Vous pouvez en savoir plus sur la structure des pull requests à partir d'ici : [Pull Requests](https://developer.github.com/v3/pulls/). 
+1. Dessinez un graphique contenant les 5 référentiels indiqués dans la Section [Outils de base](#outils) qui compare les Pull Requests qui sont 'Merged' et ceux qui sont fermés.
 2. Quelles constatations pouvez-vous tirer de ce graphique?
 
 <a name="conditions"></a>
@@ -146,8 +146,7 @@ Vous êtes encouragés à discuter du laboratoire et à poser vos questions en u
 
 <a name="remise"></a>
 ## 7. Remise
-Le travail doit être remis électroniquement sur Moodle au plus tard le **11 mars à 23h59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers, ainsi qu’un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail. 
-Une seule remise électronique est nécessaire par équipe. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent.
+Le travail doit être remis électroniquement sur Moodle au plus tard le **11 mars à 23h59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers créés lors dans la section travail à réaliser et votre rapport. Un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail doit être inclut si vos noms complets ne sont pas clairement écrit dans le rapport. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent. Une seule remise électronique est nécessaire par équipe. 
 Pour faciliter la correction, vous devez nommer votre dossier de la remise de la façon suivante :
 
 ```
