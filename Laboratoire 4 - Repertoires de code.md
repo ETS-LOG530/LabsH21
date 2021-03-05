@@ -98,7 +98,7 @@ Commencez par un fork du dépot [ETS-LOG530/sre](https://github.com/ETS-LOG530/s
 Implémentez un script qui génère un nuage de points (en utilisant ``matplotlib``) de variables de **date** vs **fichier** où les points sont ombré en fonction de la variable auteur. Chaque athour doit avoir une couleur distincte. En regardant le nuage de points, on devrait être capable d'indiquer si un fichier est touché plusieurs fois et par qui? Cela peut aider, par exemple, lors de l'identification des opportunités de refactoring ou à l'ajout de fonctionalité, à quel développeur la tâche doit être attribuée car il a travaillé sur le fichier plusieurs fois. 
 Vous obtenez un indice sur la façon de dessiner le nuage de points ce lien sur [Stackoverflow](https://stackoverflow.com/questions/8202605/matplotlib-scatterplot-colour-as-a-function-of-a-third-variable).
 
-Implémentez un stript pour dessiner le graphe de nuage de points sous le nom <``'equipeXX'_scatterplot.py``>. 
+Implémentez un script pour dessiner le graphe de nuage de points sous le nom <``'equipeXX'_scatterplot.py``>. 
 
 **Exemple** ([scottyab/rootbeer](https://github.com/ETS-LOG530/sre/blob/main/images/scottyab_rootbeer.png)) : Le référentiel [scottyab/rootbeer](https://github.com/scottyab/rootbeer) a un total de 17 fichiers source uniques ('.java'). Il a un total de 33 auteurs qui ont touché les 17 fichiers uniques (les points de données dans le graphique) qui ont modifié les fichiers et fait un commit de leurs modifications. Le nuage de points ci-dessous montre les activités des auteurs au fil du temps pour le référentiel scottyab/rootbeer.
 
