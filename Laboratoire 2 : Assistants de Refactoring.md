@@ -3,17 +3,19 @@
 #### Date de remise : 11 février 2021 à 23h59
 
 #### Table des matières
-1. [Objectifs](#objectifs)
-2. [Matériel et outils à utiliser](#materiel)
-3. [Installation et préparation](#installation)
-4. [Travail à réaliser](#travail)
-	- [Partie 1 : JPacman avec CodeSence](#partie1)
-	- [Partie 2 : JPacman avec SonarQube](#partie2)
-	- [Partie 3 : Refactoring stratégique avec JPacman](#strategique)
-	- [Partie 4 (optionnelle) : Refactoring stratégique de JPacman](#application)
-5. [Conditions de réalisation](#conditions)
-6. [Aide et discussions](#discussion)
-7. [Remise](#remise)
+1. [ Objectifs ](#objectifs)
+2. [ Matériel et outils à utiliser ](#materiel)
+3. [ Installation et préparation ](#installation)
+	- [ CodeSence ](#codescene)
+	- [ SonarQube ](#sonarqube)
+4. [ Travail à réaliser ](#travail)
+	- [ Partie 1 : JPacman avec CodeSence ](#partie1)
+	- [ Partie 2 : JPacman avec SonarQube ](#partie2)
+	- [ Partie 3 : Refactoring stratégique avec JPacman ](#strategique)
+	- [ Partie 4 (optionnelle) : Refactoring stratégique de JPacman ](#application)
+5. [ Conditions de réalisation ](#conditions)
+6. [ Aide et discussions ](#discussion)
+7. [ Remise ](#remise)
 
 <a name="objectifs"></a>
 ## 1. Objectifs
@@ -52,39 +54,19 @@ Les outils auxiliaires **ne sont pas nécessaires** pour la réalisation de labo
 <a name="installation"></a>
 ## 3. Installation et préparation
 
-Pour faire ce laboratoire, préparer les outils de base indiqués dans la [ section 2 ](#outils)(pas les [outils auxiliaires](#auxiliaires), ils sont optionnels et ne seront pas utilisés dans ce laboratoire) 
+Pour faire ce laboratoire, préparer les outils de base indiqués dans la [ section 2 : Outils de base](#outils)
 
+<a name="codescene"></a>
+### CodeScene
 Tout d'abord, assurez-vous de transférer (faire un "fork") du projet JPacman du [référentiel suivant](https://github.com/ouniali/jpacman) vers votre compte GitHub. Il est nécessaire de faire un fork du projet car la version gratuite de CodeScene voit que les projets de votre propre compte.
 
 Ensuite, allez dans CodeScene et cliquez sur le menu "Login" (coin supérieur droit). Vous pouvez choisir l'option "Login with Github" au bas de cette page. Une fois connecté, vous pouvez choisir de créer un nouveau projet où CodeScene affichera tous les projets GitHub de votre compte. Sélectionnez JPacman et passez à la partie suivante jusqu'à ce qu'elle se termine (cela peut prendre un certain temps, selon le projet).
 
 Téléchargez/Clonez le projet JPacman et ouvrez-le sur IntelliJ; lancer le build. JPacman utilise Gradle comme gestionnaire de build/dépendances. Assurez-vous de pouvoir faire le build et l'exécuter avant de modifier le code source.
 
+<a name="sonarqube"></a>
+### SonarQube
 
-<a name="travail"></a>
-## 4. Travail à réaliser
-<a name="partie1"></a>
-### Partie 1 : JPacman avec CodeSence
-
-Pour notre première tâche, nous allons utiliser CodeScene pour identifier quels artefacts ont besoin de réusinage. Vous devriez déjà avoir JPacman dans votre CodeScene tel que expliqué dans la [ Section 3 (Installation et préparation)](#installation).
-
-
-Cliquez dans le menu "Code" sur le côté gauche, puis cliquez sur "Hotspots" pour vosualiser du code. Dans cette visualisation, les hotspots sont des artefacts avec de nombreuses activités de comits. Sur cette visualisation, vous pouvez consulter l'onglet "Refactoring targets". Regardez les candidats de refactoring recommandés.
-
-
-Cliquez maintenant dans le sous-menu "Hotspot Code Health" (sous "Code") sur le côté gauche. Cela montre une liste des fichiers recommandés pour le refactoring. Sélectionnez un des fichiers dans la liste, puis cliquez sur le bouton "X-ray" puis "Run X-Ray" pour voir plus de détails sur la complexité au niveau des méthodes (l'exécution peut prendre de quelques à plusieurs minutes avant que l'outil affiche de résultat de l'analyse, dépendament de la taille et la complexité du fichier analysé). Regarder, les couleurs pour les méthodes (par exemple, les méthodes en jaune pour la classe ``MapParser.java``).
-
-Questions:
-
-1. CodeScene vous a-t-il aidé à identifier les cibles possibles pour le refactoring? Si oui, donner la liste d'artéfacts (classes et/ou méthodes) qui ont besoin de refactoring?
-
-2. CodeScene vous a-t-il donné des recommandations ou des indices sur la façon de refactoriser les cibles proposées? Comment serait-il possible de procéder avec le refactoring?
-
-
-<a name="partie2"></a>
-### Partie 2 : JPacman avec SonarQube
-
-Pour la deuxième partie, nous allons utiliser un outil plus complexe et dédié pour trouver des cibles de refactoring. 
 Téléchargez [SonarQube](https://www.sonarqube.org/) (si vous ne l'avez pas déjà fait) et décompressez-le sur votre ordinateur.
 
 **NB.** La version actuelle de *sonarqube-8.6.0* est compatible ***uniquement*** avec [Oracle JRE 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) ou OpenJDK 11. Assurez-vous d'avoir la bonne version version de java 11 dans le fichier de configuration "wrapper.conf" sous le dossier "conf" de votre dossier SonarQube (par exemple, si votre version java est jdk-11.0.9, donc vous devez avoir ``wrapper.java.command=C:\Program Files\Java\jdk-11.0.9\bin\java``).
@@ -99,7 +81,7 @@ cd windows-x86-64
 ``
 Maintenant, vous pouvez exécuter SonarQube via la commande :
 
-[ Windows ] ``StartSonar.bat ``
+[ Windows ] ``StartSonar.bat `` <br/>
 [ Linux / Mac ] ``./sonar.sh console ``
 
 
@@ -122,36 +104,63 @@ id "org.sonarqube" version "3.0"
 
 Vous pouvez maintenant utiliser le terminal à l'intérieur d'IntelliJ pour la commande donnée par SonarQube, placez-les tous sur la même ligne (adaptez la commande en conséquence pour Windows):
 
-``
+```
 gradlew sonarqube -Dsonar.projectKey=JPacman -Dsonar.host.url=http://localhost:9000 -Dsonar.login==<generated token code>
-``
+```
 
 **NB.** Sur Mac, utilisez ``./gradlew`` au lieu de ``gradlew``.
 
 Si vous rencontrez des problèmes avec la commande ci-dessus, essayez plutôt celle-ci:
 
-``
-./gradlew sonarqube -Dsonar.projectKey=JPacman  
-  -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin
-``
+```
+./gradlew sonarqube -Dsonar.projectKey=JPacman -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin
+```
 
 **NB.** Assurez-vous d'avoir la bonne version de java dans ``sourceCompatibility`` et ``targetCompatibility`` dans le fichier ``gradle.properties`` du projet JPacman.
 
-Si tout va bien, la page sur SonarQube devrait être mise à jour dans un certain temps avec les informations du code source de JPacman. Voici une capture d'écran de SonarQube une fois l'analyse terminée sur JPacman.
+Si tout va bien, la page sur SonarQube devrait être mise à jour dans un certain temps avec les informations du code source de JPacman.
+
+<a name="travail"></a>
+## 4. Travail à réaliser
+<a name="partie1"></a>
+### Partie 1 : JPacman avec CodeSence
+
+Pour la première tâche, nous utiliserons CodeScene pour identifier quels artefacts ont besoin de réusinage. Vous devriez déjà avoir JPacman dans votre CodeScene tel que expliqué dans la [ Section 3 (Installation et préparation)](#installation).
+
+
+Cliquez dans le menu "Code" sur le côté gauche, puis cliquez sur "Hotspots" pour vosualiser du code. Dans cette visualisation, les hotspots sont des artefacts avec de nombreuses activités de comits. Sur cette visualisation, vous pouvez consulter l'onglet "Refactoring targets". Regardez les candidats de refactoring recommandés.
+
+
+Cliquez maintenant dans le sous-menu "Hotspot Code Health" (sous "Code") sur le côté gauche. Cela montre une liste des fichiers recommandés pour le refactoring. Sélectionnez un des fichiers dans la liste, puis cliquez sur le bouton "X-ray" puis "Run X-Ray" pour voir plus de détails sur la complexité au niveau des méthodes (l'exécution peut prendre de quelques à plusieurs minutes avant que l'outil affiche de résultat de l'analyse, dépendament de la taille et la complexité du fichier analysé). Regarder, les couleurs pour les méthodes (par exemple, les méthodes en jaune pour la classe ``MapParser.java``).
+
+Questions:
+
+1. CodeScene vous a-t-il aidé à identifier les cibles possibles pour le refactoring? Si oui, donner la liste d'artéfacts (classes et/ou méthodes) qui ont besoin de refactoring?
+
+2. CodeScene vous a-t-il donné des recommandations ou des indices sur la façon de refactoriser les cibles proposées? Comment serait-il possible de procéder avec le refactoring?
+
+
+<a name="partie2"></a>
+### Partie 2 : JPacman avec SonarQube
+
+Pour la deuxième partie, nous allons utiliser un outil plus complexe et dédié pour trouver des cibles de refactoring. Pour la deuxième tâche, nous utiliserons SonarQube pour trouver des cibles de refactoring. Vous devriez déjà avoir SonarQube avec le protel que expliqué dans la [ Section 3 (Installation et préparation)](#installation). 
+
+Si l'installation, c'est déroulé correctement, voici à quoi ressemblera la page de SonarQube une fois l'analyse terminée sur JPacman.
 
 ![SonarQube pour JPacMan](figs/sonarqube-jpacman.png)
 
 Cliquez sur "Code Smells" et analysez les odeurs détectées. Vous pouvez également voir que SonarQube donne aussi des explications sur les odeurs ("Why this is an issue?").
 
 Questions:
+1. Prenez une capture d'écran de l'écran d'acceuil avec le nom du projet.
 
-1. Donnner la liste des artéfacts (classes et/ou méthodes) qui ont besoin de refactoring.
+2. Donnner la liste des artéfacts (classes et/ou méthodes) qui ont besoin de refactoring.
 
-2. Parmis CodeScene et SonarQube, lequel est plus utile pour trouver des cibles de refactoring?
+3. Parmis CodeScene et SonarQube, lequel est plus utile pour trouver des cibles de refactoring?
 
-3. Parmis CodeScene et SonarQube, lequel fournit le meilleur raisonnement / explication sur les cibles de refactoring possibles?
+4. Parmis CodeScene et SonarQube, lequel fournit le meilleur raisonnement / explication sur les cibles de refactoring possibles?
 
-4. Existe-t-il des artefacts communs entre SonarQube (``Code Smells``) et CodeScene (``Refactoring targets``)?
+5. Existe-t-il des artefacts communs entre SonarQube (``Code Smells``) et CodeScene (``Refactoring targets``)? Si oui, quels sont-ils?
 
 <a name="strategique"></a>
 ### Partie 3 : Refactoring stratégique avec JPacman
@@ -162,7 +171,8 @@ Comme vous l'avez probablement remarqué, il manque à JPacman de nombreuses fon
 
 Regardez les artefacts de JPacman et planifiez la ou les refactorings nécessaires pour faciliter l'ajout de plusieurs vies. Vous pouvez commencer par les refactorings les plus simples pour ne pas altérer le code ou procédez de façon raisonnable selon le patron « The Most Valuable First ». Il n'y a pas de mauvaise direction ici, faites ce que vous pensez être le plus facile ou le plus logique pour vous. Veuillez noter que vous n'avez qu'à "**planifier**" les refactorings pour ce laboratoire. (L'application des refactorings est pour la [prochaine partie](#application))
 
-**N.B** La planification est ce qui le plus important pour la partie 3.
+**N.B** La planification est ce qui le plus important pour la partie 3. <br/>
+**N.B** Veuillez garder en tête que vous êtes dans la «Partie3 : Refactoring **stragétique**» lorsque vous répondez aux questions ci-dessous.
 
 Questions:
 
@@ -189,11 +199,15 @@ Vous êtes encouragés à discuter du laboratoire et à poser vos questions en u
 
 <a name="remise"></a>
 ## 7. Remise
-Le travail doit être remis électroniquement sur Moodle au plus tard le **11 février à 23h59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers, ainsi qu’un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail. 
+Le travail doit être remis électroniquement sur Moodle au plus tard le **11 février à 23h59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers, ainsi qu’un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail si le noms des membres n'est pas clairement indiqué dans le rapport. 
 Une seule remise électronique est nécessaire par équipe. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent.
-Pour faciliter la correction, vous devez nommer vos fichiers de la façon suivante :
+Pour faciliter la correction, vous devez nommer votre dossier parent de la façon suivante :
 
 ``
 LOG530H2021-LabXX-EquipeYY-CodePermanent1_CodePermanent2_CodePermanent3
 ``
 
+et votre rapport ainsi : 
+```
+EquipeYY-Rapport.pdf
+```
