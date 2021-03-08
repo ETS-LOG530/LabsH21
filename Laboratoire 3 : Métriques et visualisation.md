@@ -112,15 +112,20 @@ En commençant par Understand, générez une visualisation de type "TreeMap" en 
 2. Quelle est la classe la plus volumuneuse dans JPacman?
 3. Quelle est la classe la plus complexe dans JPacman?
 4. Quelles sont les 8 méthodes les plus complexes dans JPacman?
-5. Quelles sont les 3 méthodes les plus larges dans JPacman?
+5. Quelles sont les 3 méthodes les plus larges (dans JPacman?
+
+**NB:** Les tests bien qu'ils font partie du projet ne sont pas considérés comme des méthodes.
+**NB:** Attention, la métrique MaxCyclomatique n'est pas équivalente à la métrique complexité cyclométrique de McCabe.
 
 #### CodeScene
 Maintenant, en utilisant CodeScene, répondez aux questions suivantes.
 
 **Questions :**<br/>
 6. Pouvez-vous identifier les artefacts qui semblent être exceptionnels? <br/>
-7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, identifiez 3 operations à appliquer à ces artefacts (identifiez seulement, sans les appliquer dans le code)? Justifiez votre réponse.<br/>
+7. Ces artefacts pourraient-ils bénéficier de refactoring? Si oui, séléctionnez trois artefacts de votre choix, et identifiez pour chaque artefact, une différente solution de refactoring à appliquer (identifiez seulement, sans les appliquer dans le code)? Une "solution" de refactoring peut consister en une ou plusieurs opérations de refactoring. Utilisez au moins trois opérations de refactoring différentes. <br/>
 8. Comment les mesures de qualité (complexité, couplage, taille) de ces artefacts sont-elles comparées aux autres?<br/>
+
+**NB:** Un artéfact exceptionnel est un artéfact (classe, méthode, package, etc.) qui est une exception à comparer aux autres artéfacts. Elle ne ressemble pas aux autres, donc qui n'est pas standard ou _normal_.
 
 <a name="partie4"></a>
 ### Partie 4 : Discussion
