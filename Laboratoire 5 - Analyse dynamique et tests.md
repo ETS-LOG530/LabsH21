@@ -14,7 +14,7 @@
 	- [Partie 2 : Amélioration de la couverture des tests de JPacman](#partie2)
 	- [Partie 3 : Le rapport JaCoCo de JPacman](#partie3)
 	- [Partie 4 : Les information de courture de SonarQube sur JPacman](#partie4)
-	- [Partie 5 (Bonus - Optionnelle) Améliorer la couverture des tests de JPacman](#partie5)
+	- [Partie 5 (Bonus - Optionnelle) : Améliorer la couverture des tests de JPacman](#partie5)
 	- [Partie 6 (Bonus - Optionnelle) : Les tests de mutation sur JPacman](#partie6)
 5. [Conditions de réalisation](#conditions)
 6. [Aide et discussions](#discussion)
