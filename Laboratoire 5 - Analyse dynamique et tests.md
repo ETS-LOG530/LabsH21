@@ -13,7 +13,7 @@
 	- [Partie 1 : Couverture des(Bonus - Optionnelle) tests de JPacman](#partie1)
 	- [Partie 2 : Amélioration de la couverture des tests de JPacman](#partie2)
 	- [Partie 3 : Le rapport JaCoCo de JPacman](#partie3)
-	- [Partie 4 : Les information de courture de SonarQube sur JPacman](#partie4)
+	- [Partie 4 : Les information de couverture de SonarQube sur JPacman](#partie4)
 	- [Partie 5 (Bonus - Optionnelle) : Améliorer la couverture des tests de JPacman](#partie5)
 	- [Partie 6 (Bonus - Optionnelle) : Les tests de mutation sur JPacman](#partie6)
 5. [Conditions de réalisation](#conditions)
@@ -114,7 +114,7 @@ Le fichier de construction gradle fourni dans JPacman est déjà configuré avec
 3.	Quelle visualisation vous préférez pour vos projets futurs en réingénierie : la fenêtre de couverture d'IntelliJ ou le rapport JaCoCo? Expliquez votre choix.
 
 <a name="partie4"></a>
-### Partie 4 : Les information de courture de SonarQube sur JPacman
+### Partie 4 : Les information de couverture de SonarQube sur JPacman
 
 SonarQube est un outil d'analyse statique. Mais il peut afficher les résultats de la couverture des tests via son interface. Tout d'abord, exécutons SonarQube tel quel. Assurez-vous que votre service SonarQube est en cours d'exécution. Ouvrez votre navigateur dans ``localhost:9000`` et vous pouvez voir la page SonarQube, s’il fonctionne correctement. Sinon, vous devriez vérifier [la documentation SonarQube](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/) sur la façon de démarrer le service, ou voir le [laboratoire 2 (Assistants de refactoring)] (https://github.com/ETS-LOG530/LabsH21/blob/main/Laboratoire%202%20:%20Assistants%20de%20Refactoring.md).
 
