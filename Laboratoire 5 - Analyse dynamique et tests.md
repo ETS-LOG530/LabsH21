@@ -186,7 +186,7 @@ Une fois terminé, vous pouvez trouver le rapport dans une structure similaire �
 
 <a name="notes"></a>
 ## 5. Notes sur les bonus
-Il y a jusqu'à un maximum de 5 points bonis à récupérer pour ce laboratoire. Vous pouvez faire la partie 5 (4 points) ou la partie 6 (5 points) ou les deux jusqu'à un maximal de 5 points bonus en total.
+Il y a jusqu'à un maximum de 5 points de bonus à récupérer pour ce laboratoire. Vous pouvez faire la partie 5 (4 points) ou la partie 6 (5 points) ou les deux jusqu'à un maximal de 5 points bonus en total.
 
 <a name="conditions"></a>
 ## 6. Conditions de réalisation
