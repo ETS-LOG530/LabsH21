@@ -39,13 +39,12 @@ La présence des tests automatisés n'offre cependant aucune garantie sur la qua
 -	[IntelliJ IDEA](https://www.jetbrains.com/idea/) : il vient avec le plugin pour la couverture des tests (vous pouvez utiliser [Eclipse](https://www.eclipse.org/), à votre discrétion, mais cela peut nécessiter des adaptations pour le projet que nous utilisons pendant les sessions de laboratoire)
 - Le projet [JPacman](https://github.com/ouniali/jpacman).
 - [SonarQube](https://www.sonarqube.org/) est un outil/plateforme pour l'analyse statique du code source. Il affiche les données de couverture des tests issues de la sortie d'outils d'analyse dynamique. Pour Java, SonarQube utilise l’output de l'outil JaCoCo.
-- [LittleDarwin](https://github.com/aliparsai/LittleDarwin) est un outil pour effectuer des tests de mutation sur les applications Java. Les tests de mutation représentent une technique relativement nouvelle qui ce rend difficile de trouver des outils disponibles.
 - [JaCoCo](https://www.jacoco.org/jacoco/index.html) est un plugin Eclipse pour l'analyse de la couverture des tests. Il est également disponible en tant que référentiel maven. Les nouvelles versions d'[IntelliJ](https://www.jetbrains.com/idea/) ont déjà ce plugin pré-installé dans le cadre du plugin de couverture de test. 
 
 <a name="lectures"></a>
 ### Lectures recommandées
 
-
+Chapitre 6 « Tests: Your Life Insurance! » du livre Object-Oriented Reengineering Patterns, page 149 (disponible en PDF sous l’onglet Références dans Moodle).
 
 
 <a name="auxiliaires"></a>
@@ -53,6 +52,7 @@ La présence des tests automatisés n'offre cependant aucune garantie sur la qua
 
 Les outils auxiliaires **ne sont pas nécessaires** pour la réalisation de laboratoire, mais ils peuvent être utiles pour obtenir des informations supplémentaires (ou des alternatives) sur un projet. Vous pouvez les utiliser à votre discrétion.
 
+- [LittleDarwin](https://github.com/aliparsai/LittleDarwin) est un outil pour effectuer des tests de mutation sur les applications Java. Les tests de mutation représentent une technique relativement nouvelle qui ce rend difficile de trouver des outils disponibles.
 - [DSpot](https://github.com/STAMP-project/dspot) est un outil d'amplification de test en Java. L'amplification des tests génère de nouveaux cas de test en utilisant les tests originaux comme germes. Il prend en charge les projets construits dans Maven et Gradle, et il a des plugins pour IntelliJ et Eclipse.
 - [Randoop](https://randoop.github.io/randoop/) est un outil de génération de tests. Il génère automatiquement des tests unitaires pour les classes Java. 
 
