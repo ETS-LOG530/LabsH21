@@ -10,17 +10,16 @@
 	- [Outils auxiliaires](#auxiliaires)
 3. [Installation et préparation](#installation)
 4. [Travail à réaliser](#travail)
-	- [Partie 1 : Couverture des(Bonus - Optionnelle) tests de JPacman](#partie1)
+	- [Partie 1 : Couverture des tests de JPacman](#partie1)
 	- [Partie 2 : Amélioration de la couverture des tests de JPacman](#partie2)
 	- [Partie 3 : Le rapport JaCoCo de JPacman](#partie3)
-	- [Partie 4 : Les information de couverture de SonarQube sur JPacman](#partie4)
+	- [Partie 4 : Les informations de couverture de SonarQube sur JPacman](#partie4)
 	- [Partie 5 (Bonus - Optionnelle) : Améliorer la couverture des tests de JPacman](#partie5)
 	- [Partie 6 (Bonus - Optionnelle) : Les tests de mutation sur JPacman](#partie6)
-5. [Conditions de réalisation](#conditions)
-6. [Aide et discussions](#discussion)
-7. [Remise](#remise)
-
-
+5. [Notes sur les bonus](#notes)
+6. [Conditions de réalisation](#conditions)
+7. [Aide et discussions](#discussion)
+8. [Remise](#remise)
 
 <a name="objectifs"></a>
 ## 1. Objectifs
@@ -81,7 +80,7 @@ Maintenant, faites un clic droit sur le dossier ``test`` (dans le dossier ``src`
 Si tout s'exécute sans erreur, vous devriez voir une nouvelle fenêtre montrant la couverture du code. Veuillez essayer de vous vous rappeler de cette couverture (vous pouvez prendre une capture d'écran).
 
 **Questions** :
-1.	Générez le rapport de couverture des tests (format html par défaut) à partir de votre IntelliJ IDE et soumettez le avec la remise de votre laboratoire.
+1.	Générez le rapport de couverture des tests (format html par défaut) à partir de votre IntelliJ IDE et soumettez-le avec la remise de votre laboratoire.
 2.	Est-ce que la couverture des tests est suffisante? Justifiez votre réponse.
 3.	Si vous apportez des modifications au code source de JPacman, pouvez-vous vous être confiants aux tests actuels pour détecter les défauts? Justifiez votre réponse.
 
@@ -95,10 +94,10 @@ Créons un test unitaire simple sur une méthode. Nous allons tester la méthode
 
 Créez le package ``level`` dans le dossier ``test``. Ensuite, créez la classe ``PlayerTest`` à l'intérieur de ce package ``level``. Vous pouvez maintenant écrire le scénario de test pour tester la méthode ``isAlive()`` depuis ``Player``.
 
-Après avoir ajouté le nouveau test, faites un build de nouveau pour ``jpacman.test`` et exécutez-le avec la couverture. Si votre test ne contient aucune erreur, vous devriez voir la fenêtre IntelliJ montrant la couverture du code. Laissez cette fenêtre avec les informations de couverture sur car vous pourriez en avoir besoin pour répondre aux questions de la tâche suivante (ou prendre une capture d'écran).
+Après avoir ajouté le nouveau test, faites un build de nouveau pour ``jpacman.test`` et exécutez-le avec la couverture. Si votre test ne contient aucune erreur, vous devriez voir la fenêtre IntelliJ montrant la couverture du code. Laissez cette fenêtre avec les informations de couverture car vous pourriez en avoir besoin pour répondre aux questions de la tâche suivante (ou prendre une capture d'écran).
 
 **Questions** :
-1.	Écrire le scenario de test pour la méthode ``isAlive()`` telque décrit ci-dessus.
+1.	Écrire le scénario de test pour la méthode ``isAlive()`` tel que décrit ci-dessus.
 2.	Comment le nouveau test a affecté la couverture?
 3.	Pensez-vous qu'une couverture à 100% est possible? Justifier votre réponse.
 4.	Que proposeriez-vous comme bon niveau de couverture de code? Justifier votre réponse.
@@ -110,11 +109,11 @@ Le fichier de construction gradle fourni dans JPacman est déjà configuré avec
 
 **Questions** :
 1.	Les résultats de couverture de JaCoCo sont-ils similaires à ceux que vous avez obtenus avec IntelliJ dans la [partie 2](#partie2) du laboratoire?
-2.	Avez-vous trouvé utile la visualisation du code source de JaCoCo sur les branches non-couvertes? Justifier votre réponse.
+2.	Avez-vous trouvé utile la visualisation du code source de JaCoCo sur les branches non couvertes? Justifier votre réponse.
 3.	Quelle visualisation vous préférez pour vos projets futurs en réingénierie : la fenêtre de couverture d'IntelliJ ou le rapport JaCoCo? Expliquez votre choix.
 
 <a name="partie4"></a>
-### Partie 4 : Les information de couverture de SonarQube sur JPacman
+### Partie 4 : Les informations de couverture de SonarQube sur JPacman
 
 SonarQube est un outil d'analyse statique. Mais il peut afficher les résultats de la couverture des tests via son interface. Tout d'abord, exécutons SonarQube tel quel. Assurez-vous que votre service SonarQube est en cours d'exécution. Ouvrez votre navigateur dans ``localhost:9000`` et vous pouvez voir la page SonarQube, s’il fonctionne correctement. Sinon, vous devriez vérifier [la documentation SonarQube](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/) sur la façon de démarrer le service, ou voir le [laboratoire 2 (Assistants de refactoring)] (https://github.com/ETS-LOG530/LabsH21/blob/main/Laboratoire%202%20:%20Assistants%20de%20Refactoring.md).
 
@@ -139,7 +138,7 @@ gradlew sonarqube -Dsonar.projectKey=JPacman -Dsonar.host.url=http://localhost:9
 Vérifiez à nouveau la page SonarQube (``localhost:9000``) et essayez de voir l'aperçu de la couverture. Ensuite, cliquez sur ``Conditions to Cover`` (Branches) et sélectionnez le fichier ``Player``. Cochez cette option de visualisation qui est très similaire à JaCoCo mais plus interactive.
 
 **Questions** :
-1. Faites une capture écran de l'information de couverture trouvée avec SonarQube dans votre rapport de laboratoire.
+1. 	Faites une capture d'écran de l'information de couverture trouvée avec SonarQube dans votre rapport de laboratoire.
 2.	Que pensez-vous de la visualisation de la couverture globale fournie par SonarQube? Quels sont les avantages et les limitations?
 3.	Laquelle des visualisations avez-vous trouvé meilleure pour visualiser le code source avec une couverture des branches, JaCoCo ou SonarQube? Justifier votre réponse.
 
@@ -149,7 +148,7 @@ Vérifiez à nouveau la page SonarQube (``localhost:9000``) et essayez de voir l
 En tant que tâche optionnelle, essayez d'augmenter la couverture des tests sur JPacman. Recherchez des endroits avec une couverture médiocre et créez de nouveaux tests pour ceux-ci. Cela pourrait vous aider à mieux comprendre le code source de JPacman, comme expliqué dans le patron "6.6. Write tests to Understand" (OORP, p.179).
 
 **Questions** :
-1.	Proposez 3 nouveaux tests à ajouter. Combien de couverture ces tests ont ajouté ?
+1.	Proposez 3 nouveaux tests à ajouter. Combien de couvertures ces tests ont ajoutées ?
 2.	Vos connaissances sur les structures internes de JPacman se sont-ils améliorés après avoir créé ces nouveaux tests ?
 3.	Sentez-vous plus confiant aux changements des artefacts si vous augmentez leurs couvertures de tests ? À quel point vous pouvez faire confiance aux nouveaux changements sur ces artefacts ? Justifier votre réponse.
 
@@ -159,9 +158,9 @@ En tant que tâche optionnelle, essayez d'augmenter la couverture des tests sur 
 
 Le test de mutation est une méthode permettant de déterminer en détail la qualité d'une suite de tests. Les tests de mutation simulent les défauts et vérifient si la suite de tests est suffisamment bonne pour détecter ces défauts simulés. Elle est réalisée en injectant des défauts dans le logiciel et en comptant le nombre de ces défauts qui font échouer au moins un test. Le processus de test de mutation nécessite les étapes suivantes. 
 
-Tout d'abord, les versions défectueuses du systéme sont créées en introduisant un seul défaut dans le système (mutation). Cela se fait en appliquant une transformation connue (Opérateur de mutation) sur une certaine partie du code. Après avoir généré les versions défectueuses du logiciel (Mutants), la suite de tests est exécutée sur chacun de ces mutants. En cas d'erreur ou d'échec lors de l'exécution de la suite de tests, le mutant est marqué comme tué (Killed Mutant). En revanche, si tous les tests réussissent, cela signifie que la suite de tests n'a pas pu détecter la faute et que le mutant a survécu (Survived Mutant). Les tests de mutation nécessitent une suite de tests verte - une suite de tests dans laquelle tous les tests réussissent (passent) - pour s'exécuter correctement. Le résultat final est calculé en divisant le nombre de mutants tués par le nombre de tous les mutants. On dit qu'une suite de tests atteint la pleine adéquation des tests chaque fois qu'elle peut tuer tous les mutants. Ces suites de tests sont appelées suites de tests adaptées aux mutations.
+Tout d'abord, les versions défectueuses du système sont créées en introduisant un seul défaut dans le système (mutation). Cela se fait en appliquant une transformation connue (Opérateur de mutation) sur une certaine partie du code. Après avoir généré les versions défectueuses du logiciel (Mutants), la suite de tests est exécutée sur chacun de ces mutants. En cas d'erreur ou d'échec lors de l'exécution de la suite de tests, le mutant est marqué comme tué (Killed Mutant). En revanche, si tous les tests réussissent, cela signifie que la suite de tests n'a pas pu détecter la faute et que le mutant a survécu (Survived Mutant). Les tests de mutation nécessitent une suite de tests verte - une suite de tests dans laquelle tous les tests réussissent (passent) - pour s'exécuter correctement. Le résultat final est calculé en divisant le nombre de mutants tués par le nombre de tous les mutants. On dit qu'une suite de tests atteint la pleine adéquation des tests chaque fois qu'elle peut tuer tous les mutants. Ces suites de tests sont appelées suites de tests adaptées aux mutations.
 
-Pour le laboratoire, nous utilisons l'outil [LittleDarwin](https://github.com/aliparsai/LittleDarwin) pour effectuer des tests de mutation sur Java.  LittleDarwin est un outil de test de mutation écrit en python qui peut analyser un grad nombre d'applications Java. Il est conçu dans le but d'un déploiement facile dans un environnement industriel, et il peut gérer des structures de système de build compliquées souvent trouvées dans de tels cas.
+Pour le laboratoire, nous utilisons l'outil [LittleDarwin](https://github.com/aliparsai/LittleDarwin) pour effectuer des tests de mutation sur Java.  LittleDarwin est un outil de test de mutation écrit en python qui peut analyser un grand nombre d'applications Java. Il est conçu dans le but d'un déploiement facile dans un environnement industriel, et il peut gérer des structures de système de build compliquées souvent trouvées dans de tels cas.
  
 Pour installer LittleDarwin, suivez les instructions sur sa page GitHub. Sur Windows avec python, il vous suffit d'utiliser la commande suivante pour l'installer: 
 ``
@@ -177,7 +176,7 @@ littledarwin  -m -b  -p ./src/main/ -t ./ -c ./gradlew,test --timeout=180
 Une fois terminé, vous pouvez trouver le rapport dans une structure similaire à ``/LittleDarwinResults/report.html`` (il y a un zip dans le référentiel avec ces rapports pour JPacman afin que vous puissiez voir les résultats sans attendre). C'est comme un rapport JaCoCo, mais au lieu d'afficher le pourcentage de couverture, il affiche la couverture de mutation (c'est-à-dire le pourcentage de mutants tués). Un score de mutation élevé indique que votre suite de tests est de bonne qualité. Prenez le rapport JaCoCo ou les résultats de SonarQube sur la couverture et comparez-le avec la couverture de mutation.
 
 **Questions** :
-1. Trouvez des classes qui ont une couverture de mutation faible et une couverture  d'instructions élevée. Qu'est-ce que indique ceci?
+1. Trouvez des classes qui ont une couverture de mutation faible et une couverture  d'instructions élevée. Qu'est-ce qu'indique ceci?
 2. Dans ces classes, recherchez un mutant survécu qui se trouve dans une instruction couverte (vous pouvez utiliser les numéros de ligne et les commentaires avant-après à l'intérieur de chaque mutant pour les trouver dans le code). Pourquoi cela arrive-t-il?
 3. Trouvez des classes qui ont une couverture de mutation élevée et une  couverture d'instructions faible. Pourquoi cela arrive-t-il?
 4. Dans ces classes, recherchez un mutant tué qui ne figure pas dans une instruction couverte. Pourquoi cela arrive-t-il?
@@ -185,20 +184,21 @@ Une fois terminé, vous pouvez trouver le rapport dans une structure similaire �
 6. La précision des tests de mutation peut-elle être améliorée? Si oui, comment pensez-vous que c'est possible?
 7. Comment les tests de mutation peuvent-ils aider à écrire de nouveaux tests?
 
+<a name="notes"></a>
+## 5. Notes sur les bonus
+Il y a jusqu'à un maximum de 5 points bonis à récupérer pour ce laboratoire. Vous pouvez faire la partie 5 (4 points) ou la partie 6 (5 points) ou les deux jusqu'à un maximal de 5 points bonus en total.
 
 <a name="conditions"></a>
-## 5. Conditions de réalisation
+## 6. Conditions de réalisation
 Le travail est à effectuer en équipes de 3 étudiants au maximum.
 
 
-
-
 <a name="discussion"></a>
-## 6. Aide et discussions
+## 7. Aide et discussions
 Vous êtes encouragés à discuter du laboratoire et à poser vos questions en utilisant le forum créé à cette fin sur Moodle ou sur Discord. Les membres de chaque équipe sont encouragés à utiliser les channels privés (textuel et vocal) créés pour leur équipe sur Discord pour discuter et travailler en équipe sur les différentes activités du laboratoire.
 
 <a name="remise"></a>
-## 7. Remise
+## 8. Remise
 Le travail doit être remis électroniquement sur Moodle au plus tard le **25 mars à 23h59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers, ainsi qu’un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail. 
 Une seule remise électronique est nécessaire par équipe. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent.
 Pour faciliter la correction, vous devez nommer votre dossier de la remise de la façon suivante :
