@@ -1,4 +1,4 @@
-# Laboratoire 3 : Métriques et visualisation
+# Laboratoire 3 - Métriques et visualisation
 ## LOG530 – Réingénierie du Logiciel
 ### Date de remise : 25 février 2021 à 23h59
 
