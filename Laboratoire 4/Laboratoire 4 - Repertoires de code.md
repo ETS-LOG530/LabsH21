@@ -135,9 +135,10 @@ En se basant sur la documentation de l'outil [RefactoringMiner](https://github.c
 **NB.** Regarder que les commits qui sont avant le début de ce laboratoire (soit avant le vendredi 12 avril 2021). Donc ignorer ceux fait après.
 
 **Questions**
-1. Quelles sont les 3 opérations de refactoring les plus appliquées ?
-2. Quelle est la classe la plus refactorisée (c-a-d, elle apparait dans des opérations de refactoring) ?
-3. (Question Bonus) Quel est le développeur le plus actif en application de refactoring ?
+1. Prenez une capture d'écran de votre code qui implémente RefactoringMiner et remettez le fichier.
+2. Quelles sont les 3 opérations de refactoring les plus appliquées ?
+3. Quelle est la classe la plus refactorisée (c-a-d, elle apparait dans des opérations de refactoring) ?
+4. (Question Bonus) Quel est le développeur le plus actif en application de refactoring ?
 
 **NB.** Vous pouvez implémenter votre script pour lire l'output générer par RefactoringMiner pour répondre aux questions.
 **NB.** Assurez-vous de prendre la bonne version de JPacman (celui du lien donner ici et non le JPacman fork du professeur ou le vôtre)
@@ -162,6 +163,7 @@ Le travail doit être remis électroniquement sur Moodle au plus tard le **11 ma
 - Le rapport ; 
 - La liste de fichiers de code que vous avez généré pour la question 1.2 ;
 - Les fichiers de code que vous avez fait : 
+  - Votre fichier ou projet de RefactoringMiner
   - ``'equipeXX'_scatterplot.py``
   - ``'equipeXX'_authorsFileTouches.py``
   - ``CollectFiles.py``
