@@ -40,7 +40,8 @@ Le travail à réaliser dans ce laboratoire vise à explorer les connaissances q
 	- [k9mail/k-9](https://github.com/k9mail/k-9)
 
 - [PyCharm IDE](https://www.jetbrains.com/fr-fr/pycharm/) : Nous aurons besoin de coder des scripts avec Python pour communiquer avec l'API Github (Vous pouvez utiliser un autre IDE Python de votre choix).
--	[RefactoringMiner](https://github.com/tsantalis/RefactoringMiner) : Un API/outil qui détecte l’historique des opérations de refactoring appliquées dans un projet (Java).
+- [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner) : Un API/outil qui détecte l’historique des opérations de refactoring appliquées dans un projet (Java).
+- [JPacman de hscrocha](https://github.com/hscrocha/jpacman)
 <a name="lecture"></a>
 ### Lectures de référence recommandées
 -	Ressources sur comment obtenir des données via Github
@@ -69,8 +70,14 @@ Pour faire ce laboratoire, nous utilisons l'API de Github. Vous avez besoin de p
 
 <a name="partie1"></a>
 ### Partie 1 : Exploration des fichiers et de fréquence de changement
-
 Créez un ou plusieurs jetons GitHub en suivant le tutoriel sur ce [lien](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token). Chaque jeton correspond à un compte GitHub. Téléchargez le fichier Python [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) qui collecte les fichiers d'un dépôt sur GitHub et exécutez-le sur votre machine. Ce fichier rassemble tous les fichiers d'un référentiel, et compte le nombre de fois que le fichier est modifié tout au long de sa durée de vie.
+
+####**Attention** ----- 
+La partie 1 et 2 ne sont pas à commencer le soir de la remise. L'API de Github a une limite de 2000 appels/heure lorsque authentifier (vs 60 appels/heure pas authentifier). Pour les gros projets, il vous faudra soit plusieurs tokens soit plusieurs heures.
+
+Pour vous assurez que vous êtes correctement authentifier vous pouvez regarder dans le header de la réponse pour X-RateLimit-Limit qui vous indiquera votre limite (5000 ou 60) ainsi que X-RateLimit-Remaining pour savoir combien d'appel il vous reste dans l'heure.
+
+**---------**
 
 Les graphiques pour le nombre de modifications sur les fichiers dans les dépôts GitHub suivants peuvent être trouvés ici :
 
@@ -81,12 +88,16 @@ Les graphiques pour le nombre de modifications sur les fichiers dans les dépôt
 
 Vous pouvez trouver les données pour les graphiques ci-dessus dans le dossier [``csv``](https://github.com/ETS-LOG530/sre/tree/main/csv) sur GitHub.
 
-Un référentiel contient à la fois des fichiers de code source et d'autres fichiers tels que des fichiers de configuration, documentation, etc. Les développeurs passent la plupart du temps à modifier les fichiers source pour de nombreuses raisons, par exemple, corriger des bogues, ajouter de nouvelles fonctionnalités ou refactoring. Le script [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) collecte tous les fichiers dans un référentiel. 
+Un référentiel contient à la fois des fichiers de code source en plus des fichiers de configuration, de documentation, de ressources, de dépendances, etc. Les développeurs passent la plupart du temps à modifier les fichiers source pour de nombreuses raisons, par exemple, corriger des bogues, ajouter de nouvelles fonctionnalités ou refactoring. Le script [``CollectFiles.py``](https://github.com/ETS-LOG530/sre/blob/main/sre2021/CollectFiles.py) collecte tous les fichiers dans un référentiel.
+Votre première tâche consiste à adapter le script pour collecter uniquement les fichiers sources (ce qui *normalement* se trouve dans le dossier src).
 
 **Questions :**
-1. Votre première tâche consiste à adapter le script pour collecter uniquement les fichiers source. Parcourez d'abord les fichiers source de chacun des dépôts pour identifier le type de fichiers source qu'il contient (**NB.** certains projets peuvent être implémentés avec plusieurs langages de programmation). La liste de fichiers de code source pour chaque projet, sont à remettre avec votre rapport de laboratoire.
-2. Pour chaque projet, identifier le fichier de code source le plus modifié.
+Pour chaque projet :
+1. Identifiez les extensions principales des fichiers sources qu'il contient (**NB.** certains projets peuvent être implémentés avec plusieurs langages de programmation). 
+2. Remettez liste de fichiers de code source pour chaque projet.
+3. Identifiez le fichier de code source le plus modifié.
 
+**NB :**Les fichiers sources sont les fichiers de code qui composent le front-end et le back-end. 
 
 <a name="partie2"></a>
 ### Partie 2 : Qui a changé quoi ?
@@ -119,7 +130,9 @@ Implémentez un script pour dessiner le graphe de nuage de points sous le nom <`
 Dans cette partie, nous nous intéressons à l'historique des changements, mais en particulier à l'historique des refactorings appliqués par les développeurs.
 Nous utilisons l'outil [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner) qui permet de parcourir les commits et en extraire les opérations de refctoring appliqués dans un projet donné.
 
-En se basant sur la documentation de l'outil [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner), exécutez l'outil avec le projet [JPacman](https://github.com/hscrocha/jpacman) pour en extraire l'historique de refactoring.
+En se basant sur la documentation de l'outil [RefactoringMiner](https://github.com/tsantalis/RefactoringMiner), exécutez l'outil avec le projet [JPacman de hscrocha](https://github.com/hscrocha/jpacman) pour en extraire l'historique de refactoring.
+
+**NB.** Regarder que les commits qui sont avant le début de ce laboratoire (soit avant le vendredi 12 avril 2021). Donc ignorer ceux fait après.
 
 **Questions**
 1. Quelles sont les 3 opérations de refactoring les plus appliquées ?
@@ -127,6 +140,7 @@ En se basant sur la documentation de l'outil [RefactoringMiner](https://github.c
 3. (Question Bonus) Quel est le développeur le plus actif en application de refactoring ?
 
 **NB.** Vous pouvez implémenter votre script pour lire l'output générer par RefactoringMiner pour répondre aux questions.
+**NB.** Assurez-vous de prendre la bonne version de JPacman (celui du lien donner ici et non le JPacman fork du professeur ou le vôtre)
 
 <a name="partie4"></a>
 ### Partie 4 (Optionnelle : Bonus) : Historique des Pull Requests 
@@ -144,9 +158,16 @@ Vous êtes encouragés à discuter du laboratoire et à poser vos questions en u
 
 <a name="remise"></a>
 ## 7. Remise
-Le travail doit être remis électroniquement sur Moodle au plus tard le **11 mars à 23 h 59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant tous les fichiers, ainsi qu’un fichier texte indiquant le nom de tous les membres de l’équipe ayant contribué à la réalisation du travail. 
-Une seule remise électronique est nécessaire par équipe. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent.
-Pour faciliter la correction, vous devez nommer votre dossier de la remise de la façon suivante :
+Le travail doit être remis électroniquement sur Moodle au plus tard le **11 mars à 23 h 59**. Vous devrez remettre une archive ``zip`` ou ``tar.gz`` contenant : 
+- Le rapport ; 
+- La liste de fichiers de code que vous avez généré pour la question 1.2 ;
+- Les fichiers de code que vous avez fait : 
+  - ``'equipeXX'_scatterplot.py``
+  - ``'equipeXX'_authorsFileTouches.py``
+  - ``CollectFiles.py``
+- le tableau de contribution tel vu dans le laboratoire précédent de manière individuelle.
+   
+Une seule remise électronique est nécessaire par équipe. Pour faciliter la correction, vous devez nommer votre dossier de la remise de la façon suivante :
 
 ```
 LOG530H2021-LabXX-EquipeYY-CodePermanent1_CodePermanent2_CodePermanent3
