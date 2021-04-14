@@ -1,4 +1,4 @@
-## Laboratoire 1 : Duplication du code
+## Laboratoire 1 - Duplication du code
 ### LOG530 – Réingénierie du Logiciel
 #### Date de remise : 27 janvier 2021
 
