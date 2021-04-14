@@ -73,7 +73,7 @@ Maintenant, faites un clic droit sur le dossier ``test`` (dans le dossier ``src`
 Si tout s'exécute sans erreur, vous devriez voir une nouvelle fenêtre montrant la couverture du code. Veuillez essayer de vous souvenir de cette couverture (vous pouvez prendre une capture d'écran).
 
 **Questions** :
-1.	Générez le rapport de couverture des tests (format html par défaut) à partir de votre IntelliJ IDE et soumettez-le avec la remise de votre laboratoire.
+1.	Soumettez le rapport de couverture des tests (format html par défaut) que vous avez généré à partir d'IntelliJ IDE en plus de votre rapport.
 2.	Est-ce que la couverture des tests est suffisante ? Justifiez votre réponse.
 3.	Si vous apportez des modifications au code source de JPacman, pouvez-vous vous être confiants aux tests actuels pour détecter les défauts ? Justifiez votre réponse.
 
@@ -129,8 +129,9 @@ Vérifiez à nouveau la page SonarQube (``localhost:9000``) et essayez de voir l
 
 **Questions** :
 1. 	Faites une capture d'écran de l'information de couverture trouvée avec SonarQube dans votre rapport de laboratoire.
-2.	Que pensez-vous de la visualisation de la couverture globale fournie par SonarQube ? Quels sont les avantages et les limitations ?
-3.	Laquelle des visualisations avez-vous trouvé meilleure pour visualiser le code source avec une couverture des branches, JaCoCo ou SonarQube ? Justifier votre réponse.
+2.	Que pensez-vous de la visualisation de la couverture globale (overview) fournie par SonarQube ? 
+3.	Quels sont les avantages et les limitations de la visualisation de la couverture globale (overview) ?
+4.	Laquelle des visualisations avez-vous trouvé meilleure pour visualiser le code source avec une couverture des branches, JaCoCo ou SonarQube ? Justifier votre réponse.
 
 <a name="partie5"></a>
 ### Partie 5 (Bonus - Optionnelle) : Améliorer la couverture des tests de JPacman
@@ -140,7 +141,8 @@ En tant que tâche optionnelle, essayez d'augmenter la couverture des tests sur 
 **Questions** :
 1.	Proposez 3 nouveaux tests à ajouter. Combien de couvertures ces tests ont ajoutées ?
 2.	Vos connaissances sur les structures internes de JPacman se sont-ils améliorés après avoir créé ces nouveaux tests ?
-3.	Sentez-vous plus confiant aux changements des artefacts si vous augmentez leurs couvertures de tests ? À quel point vous pouvez faire confiance aux nouveaux changements sur ces artefacts ? Justifier votre réponse.
+3.	Sentez-vous plus confiant aux changements des artefacts si vous augmentez leurs couvertures de tests ?
+4.	À quel point vous pouvez faire confiance aux nouveaux changements sur ces artefacts ? Justifier votre réponse.
 
 <a name="partie6"></a>
 ### Partie 6 (Bonus - Optionnelle) : Les tests de mutation sur JPacman
@@ -188,7 +190,12 @@ Vous êtes encouragés à discuter du laboratoire et à poser vos questions en u
 
 <a name="remise"></a>
 ## 8. Remise
-Une seule remise électronique est nécessaire par équipe. Remettez aussi individuellement le tableau de contribution tel vu dans le laboratoire précédent.
+Une seule remise électronique est nécessaire par équipe. 
+Vous devez remettre : 
+- Le rapport ;
+- Soumettez le rapport de couverture des tests (format html par défaut) de la partie 1 ;
+- le tableau de contribution tel vu dans le laboratoire précédent de manière individuelle.
+
 Pour faciliter la correction, vous devez nommer votre dossier de la remise de la façon suivante :
 
 ```
