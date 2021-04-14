@@ -18,8 +18,6 @@
 6. [Aide et discussions](#discussion)
 7. [Remise](#remise)
 
-
-
 <a name="objectifs"></a>
 ## 1. Objectifs
 De nombreuses entreprises, ainsi que des projets open source, utilisent des systèmes de contrôle de version comme CVS, SubVersion, ClearCase et Git pour pour la gestion des changements dans leurs projets. Ces systèmes de contrôle de version enregistrent l'ensemble des activités de développement et des changements appliquées au code source. De plus, ces systèmes de gestion des versions sont souvent associés à des plateformes de revue de code (par exemple, [Gerrit](https://www.gerritcodereview.com/), [Review Board](https://www.reviewboard.org/), [Phabricator](https://www.phacility.com/phabricator/), etc.), et des systèmes de gestion des bogues et d'incidents (par exemple, [Bugzilla](https://www.bugzilla.org/) et [JIRA](https://www.atlassian.com/fr/software/jira)) qui permettent aux utilisateurs de signaler des bogues, demander de nouvelles fonctionnalités, etc. Ces systèmes enregistrent toute l'évolution d'un système logiciel.
