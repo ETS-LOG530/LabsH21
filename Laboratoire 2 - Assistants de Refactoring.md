@@ -1,4 +1,4 @@
-## Laboratoire 2 : Assistants de Refactoring
+## Laboratoire 2 - Assistants de Refactoring
 ### LOG530 – Réingénierie du Logiciel
 #### Date de remise : 11 février 2021 à 23h59
 
