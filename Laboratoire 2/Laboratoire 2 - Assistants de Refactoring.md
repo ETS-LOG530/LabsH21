@@ -207,7 +207,7 @@ Pour faciliter la correction, vous devez nommer votre dossier parent de la faço
 LOG530H2021-LabXX-EquipeYY-CodePermanent1_CodePermanent2_CodePermanent3
 ``
 
-et votre rapport ainsi : 
+Et votre rapport ainsi : 
 ```
 EquipeYY-Rapport.pdf
 ```

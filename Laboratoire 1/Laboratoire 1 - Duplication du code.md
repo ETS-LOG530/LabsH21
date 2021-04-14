@@ -243,8 +243,8 @@ Pour faciliter la correction, vous devez nommer votre dossier de remise de la fa
 LOG530H2021-LabXX-EquipeYY-CodePermanent1_CodePermanent2_CodePermanent3
 ``
 
-et votre rapport ainsi : 
+Et votre rapport ainsi : 
 
 ``
-LOG530H2021-LabXX-EquipeYY-Rapport.pdf
+EquipeYY-Rapport.pdf
 ``
